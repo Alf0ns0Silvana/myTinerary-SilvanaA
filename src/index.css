@@ -14,15 +14,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -30,25 +21,40 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
 h1 {
-  font-size: 3.2em;
+  height: 43px;
+  width: 183px;
+  /* font-family: segoe UI-MONOSPACE; */
+  font-weight: 700;
+  color: #1C1C1C;
   line-height: 1.1;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+a {
+  font-weight: 700;
+  line-height: 31.92px;
+  font-size: 24px;
+  height: 32px;
+  width: 69px;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  color: #1C1C1C;
+  text-decoration: inherit;
+}
+button {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 16px 32px;
+  width: 64px;
+  height: 32px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
   cursor: pointer;
+  line-height: 31.92px;
   transition: border-color 0.25s;
+  /* font-family: segoe UI-MONOSPACE; */
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #a5a9f0;
 }
 button:focus,
 button:focus-visible {
