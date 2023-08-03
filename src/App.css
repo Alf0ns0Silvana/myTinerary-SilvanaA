@@ -8,7 +8,7 @@
   height: 64px;
 }
 .nav{
-  width: 354px;
+  width: 555px;
   display: flex;
   gap: 32px;
   flex-direction: row;
@@ -118,7 +118,7 @@
   justify-content: space-between;
 }
 .column2 a{
-  width: 60px;
+  width: 80px;
   font-size: 15px;
   padding: 5px;
   color: #fff;
