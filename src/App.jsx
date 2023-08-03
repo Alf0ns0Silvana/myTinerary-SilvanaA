@@ -1,14 +1,13 @@
-import Header from './components/Header'
-import Main from './components/main'
-import Footer from './components/Footer'
+import Main from './layouts/Main'
+import Home from './pages/Home'
 import './App.css'
 
 function App() {
   return (
     <>
-      <Header/>
-      <Main/>
-      <Footer/>
+      <Main>
+        <Home/>
+      </Main>
     </>
   )
 }
