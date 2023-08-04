@@ -16,7 +16,7 @@ function Footer () {
         </span>
         </div>
         <div className="column2">
-        {links.map((link) => (<Link title={link.title} to={link.to}/>))}
+        {links.map((link) => (<Link key={link.title} title={link.title} to={link.to}/>))}
         </div>
         <div className="column3">
         <div className="column-title">Contact Us</div>

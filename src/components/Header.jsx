@@ -10,7 +10,7 @@ const Header = () => {
     <header className='header'>
         <h1>My Tinerary</h1>
         <nav className='nav'>
-        {links.map((link) => (<Link title={link.title} to={link.to}/>))}
+        {links.map((link) => (<Link key={link.title} title={link.title} to={link.to}/>))}
         <button className='login_btn'> <img src={Vector} alt="Icon login" />Login</button>
         </nav>
   </header>
