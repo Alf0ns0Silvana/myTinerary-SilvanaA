@@ -2,27 +2,24 @@ import { useState, useEffect } from "react";
 const Home = () => {
     const slides = [
       ["./Ushuaia-TdF.jpg", "./Santiago-Ch.jpg", "./BoraBora-PF.jpg", "./Rosario-Ar.jpg"],
-      ["imagen5.jpg", "imagen6.jpg", "imagen7.jpg", "imagen8.jpg"],
-      ["imagen9.jpg", "imagen10.jpg", "imagen11.jpg", "imagen12.jpg"],
+      ["./Bogota-Co.jpg", "./España-Es.jpg", "./Grecia-At.jpg", "./Italia-Nap.jpg"],
+      ["./LasVegas-EU.jpg", "./Oporto-Port.jpg", "./Paris-Fr.jpg", "./RiodeJaneiro-Br.jpg"],
     ];
-  
+
     const [currentSlide, setCurrentSlide] = useState(0);
-  
     const nextSlide = () => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
     };
-  
     const prevSlide = () => {
       setCurrentSlide((prevSlide) =>
         prevSlide === 0 ? slides.length - 1 : prevSlide - 1
       );
     };
-  
     useEffect(() => {
       const interval = setInterval(nextSlide, 10000);
       return () => clearInterval(interval);
     }, []);
-  
+
     return (
       <div className="container-home">
         <div className="hero">
@@ -38,6 +35,7 @@ const Home = () => {
           <div className="hero-img">
           </div>
         </div>
+        <div className="container-carousel">
         <div className="carousel">
               <button onClick={prevSlide}>Prev</button>
               <div className="carousel-container">
@@ -48,9 +46,11 @@ const Home = () => {
                 ))}
               </div>
               <button onClick={nextSlide}>Next</button>
-            </div>
+        </div>
+        </div>
+
       </div>
     );
-  };
+};
 
 export default Home

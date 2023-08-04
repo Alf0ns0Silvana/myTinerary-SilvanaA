@@ -87,7 +87,12 @@
   height: 200px;
   padding: 20px;
 }
+.container-carousel{
+  display: flex;
+  justify-content: center;
+}
 .carousel{
+  width: 80%;
   height: 105vh;
   display: flex;
   justify-content: space-around;
@@ -104,9 +109,10 @@
 .carousel-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .carousel-slide{
-  flex: 0 0 45%; 
+  flex: 0 0 35%; 
   overflow: hidden; 
 }
 .carousel-slide img {
