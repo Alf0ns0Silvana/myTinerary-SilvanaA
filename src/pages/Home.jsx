@@ -1,10 +1,31 @@
 import { useState, useEffect } from "react";
 const Home = () => {
     const slides = [
-      ["./Ushuaia-TdF.jpg", "./Santiago-Ch.jpg", "./BoraBora-PF.jpg", "./Rosario-Ar.jpg"],
-      ["./Bogota-Co.jpg", "./España-Es.jpg", "./Grecia-At.jpg", "./Italia-Nap.jpg"],
-      ["./LasVegas-EU.jpg", "./Oporto-Port.jpg", "./Paris-Fr.jpg", "./RiodeJaneiro-Br.jpg"],
-    ];
+        {
+          images: [
+            { src: "./Ushuaia-TdF.jpg", city: "Ushuaia, Tierra del Fuego" },
+            { src: "./Santiago-Ch.jpg", city: "Santiago, Chile" },
+            { src: "./BoraBora-PF.jpg", city: "Bora Bora, Polinesia Francesa" },
+            { src: "./Rosario-Ar.jpg", city: "Rosario, Argentina" },
+          ],
+        },
+        {
+          images: [
+            { src: "./Bogota-Co.jpg", city: "Bogotá, Colombia" },
+            { src: "./España-Es.jpg", city: "España" },
+            { src: "./Grecia-At.jpg", city: "Atenas, Grecia" },
+            { src: "./Italia-Nap.jpg", city: "Nápoles, Italia" },
+          ],
+        },
+        {
+          images: [
+            { src: "./LasVegas-EU.jpg", city: "Las Vegas, Estados Unidos" },
+            { src: "./Oporto-Port.jpg", city: "Oporto, Portugal" },
+            { src: "./Paris-Fr.jpg", city: "París, Francia" },
+            { src: "./RiodeJaneiro-Br.jpg", city: "Río de Janeiro, Brasil" },
+          ],
+        },
+      ];
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const nextSlide = () => {
@@ -21,36 +42,41 @@ const Home = () => {
     }, []);
 
     return (
-      <div className="container-home">
-        <div className="hero">
-          <div className="hero-info">
-            <h2 className="hero-title">Find the perfect destination</h2>
-            <p className="hero-subtitle">
-              Our app will help you find the perfect path for your next trip. With an
-              easy-to-use interface and a host of itinerary options, planning your next
-              trip has never been easier.
-            </p>
-            <button className="view-more">View more</button>
+        <div className="container-home">
+          <div className="hero">
+            <div className="hero-info">
+              <h2 className="hero-title">Find the perfect destination</h2>
+              <p className="hero-subtitle">
+                Our app will help you find the perfect path for your next trip. With an
+                easy-to-use interface and a host of itinerary options, planning your next
+                trip has never been easier.
+              </p>
+              <button className="view-more">View more</button>
+            </div>
+            <div className="hero-img">
+                <img src="./hero-img.png" alt="Logo-myTinerary" />
+            </div>
           </div>
-          <div className="hero-img">
-          </div>
-        </div>
-        <div className="container-carousel">
-        <div className="carousel">
+          <div className="container-carousel">
+            <h2 className="text-carousel">Popular MYTINERARIES!</h2>
+            <div className="carousel">
               <button onClick={prevSlide}>Prev</button>
               <div className="carousel-container">
-                {slides[currentSlide].map((image, index) => (
+                {slides[currentSlide].images.map((image, index) => (
                   <div key={index} className="carousel-slide">
-                    <img src={image} alt={`imagen-${index + 1}`} />
+                    <img src={image.src} alt={`imagen-${index + 1}`} />
+                    <h3 className="text-city">{image.city}</h3>
                   </div>
                 ))}
               </div>
               <button onClick={nextSlide}>Next</button>
+            </div>
+          </div>
         </div>
-        </div>
-
-      </div>
-    );
-};
-
+      );
+    };
+    
 export default Home
+
+// titlo al carousel, link cities debe ir auna pag vacia igual q boton
+// call to action que todavia no hice y responsividad 
