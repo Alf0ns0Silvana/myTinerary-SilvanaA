@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 const Home = () => {
     const slides = [
         {
@@ -77,6 +78,3 @@ const Home = () => {
     };
     
 export default Home
-
-// titlo al carousel, link cities debe ir auna pag vacia igual q boton
-// call to action que todavia no hice y responsividad 

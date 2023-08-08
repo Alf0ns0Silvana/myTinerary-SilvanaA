@@ -15,8 +15,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  /* min-width: 320px;
-  min-height: 100vh; */
+  min-width: 1075px;
 }
 h1 {
   height: 43px;

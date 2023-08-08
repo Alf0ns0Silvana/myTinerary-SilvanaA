@@ -1,11 +1,13 @@
 import Vector from '/Vector.png'
 import Link from './Links'
+
 const Header = () => {
     const links = [
         {title:'Home', to:'/home'},
         {title:'Cities', to:'/cities'},
-        {title:'About us', to:'/aboutus'}
-    ]
+        {title:'About us', to:'/aboutus'},
+        {title:'Sign In', to:'/signin'}
+      ]
   return (
     <header className='header'>
         <h1>My Tinerary</h1>
