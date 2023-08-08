@@ -21,9 +21,9 @@ function Footer () {
         <div className="column3">
         <div className="column-title">Contact Us</div>
         <div className="social-icons">
-            <span className="social-icon"></span>
-            <span className="social-icon"></span>
-            <span className="social-icon"></span>
+            <a href='' className="social-icon"><img src="./wsp-icon.png" /></a>
+            <a href='' className="social-icon"><img src="./fb-icon.png" /></a>
+            <a href='' className="social-icon"><img src="./ig-icon.png" /></a>
         </div>
         </div>
   </footer>
