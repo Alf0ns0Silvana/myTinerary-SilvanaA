@@ -4,6 +4,7 @@ import Main from '../layouts/Main'
 import Cities from "../pages/Cities";
 import SignIn from "../pages/SignIn";
 import AboutUs from "../pages/AboutUs";
+import CityDetails from "../components/CityDetails";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
                 element: <Cities/>
             },
             {
+                path:'/Cities/:id',
+                element: <CityDetails/>
+            },
+            {
                 path:'/aboutus',
                 element: <AboutUs/>
             },
@@ -26,6 +31,11 @@ const router = createBrowserRouter([
                 path:'/signin',
                 element: <SignIn/>
             }
+            //,
+            // {
+            //     path:'/*',
+            //     element: <h1>Page not found</h1>
+            // }
         ]
     },
 ]);

@@ -1,7 +1,7 @@
 import Link from './Links'
 function Footer () {
     const links = [
-        {title:'Home', to:'/home'},
+        {title:'Home', to:'/'},
         {title:'Cities', to:'/cities'},
         {title:'About us', to:'/aboutus'}
     ]
@@ -21,9 +21,9 @@ function Footer () {
         <div className="column3">
         <div className="column-title">Contact Us</div>
         <div className="social-icons">
-            <a href='' className="social-icon"><img src="./wsp-icon.png" /></a>
-            <a href='' className="social-icon"><img src="./fb-icon.png" /></a>
-            <a href='' className="social-icon"><img src="./ig-icon.png" /></a>
+            <a href='#' className="social-icon"><img src="./wsp-icon.png" /></a>
+            <a href='#' className="social-icon"><img src="./fb-icon.png" /></a>
+            <a href='#' className="social-icon"><img src="./ig-icon.png" /></a>
         </div>
         </div>
   </footer>
