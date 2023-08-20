@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Cardcities from '../components/Cardcities';
@@ -12,11 +12,16 @@ const CityDetails = () => {
         .then(response => setCity(response.data.city))
         .catch(error => console.log(error));
     }, [id]);
+
     return (
       <div>
-        <h2 className='pages-subtitles'>{city.name}</h2>
-        <Cardcities city={city} />
-
+            <div className="title-back-btn">
+                <h2 className='pages-subtitles'>{city.name}</h2>
+                <Link to="/Cities" className="back-city-btn">
+                ← Back to cities
+                </Link>
+            </div>
+                <Cardcities city={city} />
       </div>
     );
   };

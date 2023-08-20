@@ -4,7 +4,6 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 
-
 const Cities = () => {
     const [cities, setCities] = useState([]);
 
