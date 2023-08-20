@@ -1,13 +1,24 @@
 import { useParams } from "react-router-dom";
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import Cardcities from '../components/Cardcities';
 
-const cityDetails = () => {
+const CityDetails = () => {
+    const [city, setCity] = useState({});
     const { id } = useParams();
 
+    useEffect(() => {
+      axios.get(`http://localhost:8000/api/cities/${id}`)
+        .then(response => setCity(response.data.city))
+        .catch(error => console.log(error));
+    }, [id]);
     return (
-        <div className="">
-            <h2>Details of: {id}</h2>
-        </div>
-    )
-}
+      <div>
+        <h2 className='pages-subtitles'>{city.name}</h2>
+        <Cardcities city={city} />
 
-export default cityDetails;
+      </div>
+    );
+  };
+  
+  export default CityDetails;
