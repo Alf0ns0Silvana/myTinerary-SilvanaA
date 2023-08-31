@@ -293,6 +293,7 @@
   height: 50vh;
 }
 .city-card-title {
+  font-size: 24px;
   margin: 10px 0;
 }
 .city-card-description {
@@ -304,6 +305,7 @@
   align-items: center;
   justify-content: center;
   background-color: #4F46E5;
+  flex-direction: column;
 }
 .title-back-btn{
     display: flex;
@@ -321,6 +323,38 @@
 .back-city-btn:hover {
   color: rgb(79, 70, 229, 1);
   border-bottom: 1px solid rgb(79, 70, 229, 1);
+}
+
+.container-itinerary{
+  height: 20vh;
+}
+.itineraries{
+  background-color: #aeb3bd;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 25px 40px;
+}
+.itinerarie-title{
+  font-size: 20px;
+  color: #555555;
+}
+.itinerarie-info{
+  display: flex;
+  color:  #555555;
+  justify-content: space-evenly;
+}
+.price-duration{
+  width: 20%;
+}
+.user{
+  width: 20%;
+}
+.likes_hashtags{
+  width: 20%;
+}
+.sorry{
+  color:#555555;
+  font-size: 22px;
 }
 
 /* Sign in */
@@ -344,7 +378,7 @@ button:focus {
   transition: all .2s ease;
 }
 .ghost-round {
-  margin-top: 50px;
+  margin: 25px 0px;
   cursor: pointer;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.65);
@@ -379,8 +413,19 @@ button:focus {
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
+.container-buttons{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .full-width {
   width: 100%;
+}
+.media-width{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:80%;
 }
 .input-fields {
   margin-top: 25px;

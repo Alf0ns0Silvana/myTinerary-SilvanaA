@@ -32,7 +32,6 @@ const Cities = () => {
             }
         }
     }
-
     return (
       <div>
         <h2 className='pages-subtitles'>Cities</h2>

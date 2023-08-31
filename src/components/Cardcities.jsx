@@ -1,4 +1,6 @@
-const Cardcities = ({city}) => {
+import { Link } from 'react-router-dom';
+
+const Cardcities = ({city, showDetailsButton = true}) => {
   return (
     <div className="container-cards">
         <div className="city-card">
@@ -10,7 +12,11 @@ const Cardcities = ({city}) => {
                   <p className="">{city.description}</p>
                   <span>{city.departureDateTime}</span>
                 </div>
-                <button className="city-card-button">See details</button>
+                {showDetailsButton && (
+                <button className="city-card-button">See details
+                    <Link to={`/CityDetails/${city._id}`}></Link>
+                </button>
+            )}
           </div>
         </div>
     </div>
