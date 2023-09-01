@@ -326,7 +326,11 @@
 }
 
 .container-itinerary{
-  height: 20vh;
+  display: flex;
+  height: 25vh;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
 }
 .itineraries{
   background-color: #aeb3bd;
@@ -342,19 +346,58 @@
   display: flex;
   color:  #555555;
   justify-content: space-evenly;
+  align-items: center;
 }
 .price-duration{
   width: 20%;
 }
 .user{
-  width: 20%;
+  display: flex;
+  width: 25%;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
 }
+.user-foto{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
 .likes_hashtags{
   width: 20%;
 }
 .sorry{
   color:#555555;
   font-size: 22px;
+}
+
+.activities-panel{
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.activities_btn{
+  font-size: 12px;
+  font-weight: 100;
+  width: 130px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba(94, 22, 22, 0.9),rgb(105, 66, 211));
+}
+.activities{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #555555;
+  height: 20vh;
+  width: 100%;
+  background-color: #aeb3bd;
+  margin: 5px;
+  border-radius: 20px;
 }
 
 /* Sign in */
@@ -488,6 +531,25 @@ button:focus {
   border-radius: 10px;
 }
 
+/* User logged */
+
+.signUp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 45vh;
+  width: 100%;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.user-name-logged{
+  font-size: 20px;
+}
+.user-foto-logged{
+ width: 290px;
+ height: 280px;
+ border-radius: 50%;
+}
 @media (max-width: 768px) {
   .header{
     padding: 1em;

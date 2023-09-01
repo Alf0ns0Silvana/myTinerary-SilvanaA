@@ -3,7 +3,8 @@ import { user_photo } from '../actions/userActions';
 
 const initialState = {
     name: 'Pocahontas',
-    photo: 'https://thumbs.dreamstime.com/b/mujer-feliz-que-destaca-con-ambas-manos-39096339.jpg'
+    photo: 'https://thumbs.dreamstime.com/b/mujer-feliz-que-destaca-con-ambas-manos-39096339.jpg',
+    isLoggedIn: false
 }
 const userReducer = createReducer(initialState,
     (builder) => builder
@@ -11,11 +12,11 @@ const userReducer = createReducer(initialState,
             return {
                 ...state,
                 photo: action.payload.photo,
-                name: action.payload.name
+                name: action.payload.name,
+                isLoggedIn: true
             }
         }
     )   
 )
 
-export default userReducer; // es el unico q puede modificar el store,
-//recibe la info del action, hace la logica para modificar un componente
+export default userReducer;
