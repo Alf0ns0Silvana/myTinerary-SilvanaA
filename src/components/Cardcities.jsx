@@ -13,9 +13,7 @@ const Cardcities = ({city, showDetailsButton = true}) => {
                   <span>{city.departureDateTime}</span>
                 </div>
                 {showDetailsButton && (
-                <button className="city-card-button">See details
-                    <Link to={`/CityDetails/${city._id}`}></Link>
-                </button>
+                    <button className="city-card-button" onClick={() =>(`/CityDetails/${city._id}`)}>See details</button>
             )}
           </div>
         </div>

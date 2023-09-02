@@ -50,7 +50,7 @@ const CityDetails = () => {
                   {itineraries.length > 0 ? (
                     <div>
                       {itineraries.map(Itinerary => (
-                        <div className="container-itinerary">
+                        <div className="container-itinerary" key={Itinerary._id}>
                             <div className="itinerarie-title" key={Itinerary._id}>
                                 <h4>{Itinerary.name}</h4><hr />
                             </div>
