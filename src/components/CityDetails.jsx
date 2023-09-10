@@ -57,7 +57,7 @@ const CityDetails = () => {
                             <div className="itinerarie-info">
                                 <div className="price-duration">
                                   <p>Price: 💵{Itinerary.price}</p>
-                                  <p>Duration: {Itinerary.duration} days</p>
+                                  <p>Duration: {Itinerary.duration} hours</p>
                                 </div> 
                                 <div className="user">
                                   <span className="user-name">{user_name}</span>
@@ -94,3 +94,11 @@ const CityDetails = () => {
   };
 
 export default CityDetails; 
+
+
+
+
+
+
+
+

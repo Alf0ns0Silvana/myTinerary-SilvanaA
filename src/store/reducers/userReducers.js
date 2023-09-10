@@ -1,10 +1,10 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { user_photo } from '../actions/userActions';
+import { user_login, user_photo } from '../actions/userActions';
 
 const initialState = {
-    name: 'Pocahontas',
-    photo: 'https://thumbs.dreamstime.com/b/mujer-feliz-que-destaca-con-ambas-manos-39096339.jpg',
-    isLoggedIn: false
+    user: null,
+    token: null,
+    isLoggedIn: null
 }
 const userReducer = createReducer(initialState,
     (builder) => builder
@@ -12,11 +12,17 @@ const userReducer = createReducer(initialState,
             return {
                 ...state,
                 photo: action.payload.photo,
-                name: action.payload.name,
-                isLoggedIn: true
+                name: action.payload.name
             }
-        }
-    )   
+        }) 
+        .addCase(user_login.fulfilled, (state, action) => {
+            return {
+                ...state,
+                user: action.payload.user,
+                token: action.payload.token,
+                isLoggedIn: true,
+            }
+        })
 )
 
 export default userReducer;

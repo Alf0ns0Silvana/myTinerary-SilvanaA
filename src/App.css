@@ -444,7 +444,7 @@ button:focus {
 }
 .input-line {
   background: none;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   line-height: 2.4em;
   color: #fff;
   font-weight: 300;
@@ -487,12 +487,13 @@ button:focus {
   background: #EBEBEB;
 }
 .content {
-  padding: 0px 25px;
+  padding: 40px 25px;
   display: flex;
   -webkit-flex-flow: column;
   -ms-flex-flow: column;
   flex-flow: column;
   z-index: 5;
+  justify-content: space-around;
 }
 .welcome {
   margin: 45px 0px;
