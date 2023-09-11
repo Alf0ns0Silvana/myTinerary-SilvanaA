@@ -10,10 +10,10 @@
 .nav{
   width: 640px;
   display: flex;
-  gap: 32px;
+  gap: 45px;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .nav a{
   transition: color 1s, border-bottom 1s;
@@ -546,16 +546,30 @@ button:focus {
 .user-name-logged{
   font-size: 20px;
 }
+.user-info{
+  width: 100%;
+  gap: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
 .user-foto-logged{
- width: 290px;
- height: 280px;
+ width: 70px;
+ height: 70px;
  border-radius: 50%;
 }
+.btn_logout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .header{
     padding: 1em;
     flex-direction: column;
-    height: 301px;
+    height: 355px;
   }
   .nav{
     flex-direction: column;
@@ -563,11 +577,9 @@ button:focus {
     gap: 5px;
     width: auto;
   }
-  .login_btn{
-    width: 110px;
-    height: 40px;
-    gap: 5px;
-    justify-content: center;
+  .user-info{
+    flex-direction: column;
+    gap: 10px;
   }
   .hero{
     width: auto;

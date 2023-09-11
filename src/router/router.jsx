@@ -6,6 +6,7 @@ import SignIn from "../pages/SignIn";
 import AboutUs from "../pages/AboutUs";
 import CityDetails from "../components/CityDetails";
 import ProtectedRoute from "./ProtectedRoute";
+import SignUp from "../pages/Signup";
 
 const router = createBrowserRouter([
     {
@@ -22,10 +23,10 @@ const router = createBrowserRouter([
             },
             {
                 path:'/Cities/:id',
-                element: (<ProtectedRoute>
+                element: 
+                //(<ProtectedRoute  path='/404'>
                             <CityDetails/>
-                        </ProtectedRoute>)
-
+                // </ProtectedRoute>)
             },
             {
                 path:'/aboutus',
@@ -33,24 +34,24 @@ const router = createBrowserRouter([
             },
             {
                 path:'/signin',
-                element: <SignIn/>
+                element:(<ProtectedRoute path='/'>
+                    <SignIn/>
+                </ProtectedRoute>)
 
             },
             ,
             {
                 path:'/signup',
-                element: (<ProtectedRoute>
-                    <signUp/>
-                </ProtectedRoute>)
+                element: <SignUp/>
+
+            },
+            {
+                path:'/404',
+                element: <h1 className="pages-subtitles">You need to login or create account to view details</h1>
             },
             {
                 path:'/*',
                 element: <h1 className="pages-subtitles">Page not found</h1>
-            }
-            ,
-            {
-                path:'/404',
-                element: <h1 className="pages-subtitles">You need to login or create account to view details</h1>
             }
         ]
     },
