@@ -8,7 +8,8 @@ const SignIn = () => {
 
   const [formData, setFormData] = useState({
     email: '',
-    password: ''
+    password: '',
+    name: ''
   })
   const handleInput = (e) => {
 
@@ -50,6 +51,7 @@ const SignIn = () => {
               <div className='content'>
                 <div className='subtitle'>Before using our services you need to login</div>
                 <div className='input-fields'>
+                <input onChange={handleInput} name="name" type='text' placeholder='Name' className='input-line full-width'></input>
                   <input onChange={handleInput} name="email" type='email' placeholder='Email' className='input-line full-width'></input>
                   <input onChange={handleInput} name="password" type='password' placeholder='Password' className='input-line full-width'></input>
                 </div>

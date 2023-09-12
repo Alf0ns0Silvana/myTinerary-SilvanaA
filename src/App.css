@@ -400,6 +400,28 @@
   border-radius: 20px;
 }
 
+/* sign up*/
+.container{
+  flex-direction: column;
+  display: flex;
+}
+.input-fields-signup{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.overlay-signup {
+  background: -webkit-linear-gradient(#4715fd, #111011);
+  background: linear-gradient(#4400ff, #000000);
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  height: 765px;
+  position: absolute;
+  width: 530px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
 /* Sign in */
 
 .input-line {
@@ -446,7 +468,7 @@ button:focus {
   background: none;
   margin-bottom: 25px;
   line-height: 2.4em;
-  color: #fff;
+  color: #bfbfbf;
   font-weight: 300;
   letter-spacing: 0px;
   letter-spacing: 0.02rem;

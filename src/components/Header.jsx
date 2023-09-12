@@ -11,7 +11,9 @@ const Header = () => {
     const handleLogout = () => {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
+      localStorage.removeItem(user.img);
       dispatch(user_logout());
+      console.log('datos user y token borrados')
     };
     
   return (
