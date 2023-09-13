@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const slides = [
@@ -52,7 +53,7 @@ const Home = () => {
                 easy-to-use interface and a host of itinerary options, planning your next
                 trip has never been easier.
               </p>
-              <button className="view-more">View more</button>
+              <Link to='/signin' className="view-more">View more</Link>
             </div>
             <div className="hero-img">
                 <img src="./hero-img.png" alt="Logo-myTinerary" />

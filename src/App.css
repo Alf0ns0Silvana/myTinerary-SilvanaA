@@ -85,11 +85,14 @@
   color: rgb(28,28,28, 0.6);
 }
 .view-more{
+  display: flex;
   padding: 16px 20px;
   border-radius: 8px;
   background-color: rgb(79,70,229,1);
-  height: 64px;
-  width: 346px;
+  height: 35px;
+  width: 310px;
+  align-items: center;
+  justify-content: center;
 }
 .hero-img{
   width: 310px;
@@ -443,7 +446,7 @@ button:focus {
   transition: all .2s ease;
 }
 .ghost-round {
-  margin: 25px 0px;
+  margin-top: 15px;
   cursor: pointer;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.65);
@@ -479,6 +482,7 @@ button:focus {
   transition: all .2s ease;
 }
 .container-buttons{
+  gap: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;

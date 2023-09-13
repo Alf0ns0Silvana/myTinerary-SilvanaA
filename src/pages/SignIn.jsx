@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector  } from "react-redux";
+import { GoogleSignin } from "../components/GoogleSignin.jsx";
 import { user_login } from "../store/actions/userActions";
 
 const SignIn = () => {
@@ -56,6 +57,7 @@ const SignIn = () => {
                   <input onChange={handleInput} name="password" type='password' placeholder='Password' className='input-line full-width'></input>
                 </div>
                 <div className="container-buttons"><button onClick={handleSignIn} type="submit" className='ghost-round full-width'>Login</button>or
+                <GoogleSignin/>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector  } from "react-redux";
 import { user_signup } from "../store/actions/userActions";
+import { GoogleSignin } from "../components/GoogleSignin.jsx";
 
 const SignUp = () => {
     const store = useSelector (store => store.userReducer)
@@ -67,6 +68,7 @@ const SignUp = () => {
                                 </select>
                                 </div>
                                 <div className="container-buttons"><button  onClick={handleSignUp} type="submit" className='ghost-round full-width'>Signup</button>or
+                                <GoogleSignin/>
                             </div>
                         </div>
                     </div>
