@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Cardcities from '../components/Cardcities';
 import { useSelector, useDispatch } from "react-redux";
 import { user_photo } from "../store/actions/userActions";
+import apiUrl from "../api.js";
 
 const CityDetails = () => {
     const [city, setCity] = useState({});
@@ -12,11 +13,11 @@ const CityDetails = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-      axios.get(`http://localhost:8000/api/cities/${id}`)
+      axios.get(`${apiUrl}/cities/${id}`)
         .then(response => { setCity(response.data.city);
           setItineraries(response.data.city.Itinerary);
             console.log(response.data.city.Itinerary)
-          // me trae bien todos los datos
+
         })
         .catch(error => console.log(error));
     }, [id]);

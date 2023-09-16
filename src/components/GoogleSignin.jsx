@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRef } from "react"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux";
+import apiUrl from "../api.js";
 import { user_login_google } from "../store/actions/userActions";
 
 export const GoogleSignin = () => {
@@ -15,7 +16,7 @@ export const GoogleSignin = () => {
             token_id: response.credential
         };
         try {
-        const userResponse = await axios.post('http://localhost:8000/api/auth/google', data);
+        const userResponse = await axios.post(`${apiUrl}/auth/google`, data);
         console.log(userResponse, 'user')
         dispatch(user_login_google({
             data: userResponse
@@ -35,13 +36,13 @@ export const GoogleSignin = () => {
             });
             window.google.accounts.id.renderButton(
                 googleButton.current,
-                { type: 'standard', shape: 'rectangular', theme: "outline", size: "large", text:"signin_with"}
+                { type: 'standard', shape: 'circle', theme: "outline", size: "large", text:"signin_with"}
             );
         }
     }, [ ])
 
     return (
-        <div className="btn_goole" ref={googleButton}></div>
+        <div  style={{ colorScheme: 'light' }} className="btn-google" ref={googleButton}></div>
     )
 
 }
