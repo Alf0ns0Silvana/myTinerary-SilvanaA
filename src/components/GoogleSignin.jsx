@@ -32,6 +32,7 @@ export const GoogleSignin = () => {
         if(window.google) {
             window.google.accounts.id.initialize({
                 client_id:"1037587118664-d483oog51k6un8i2tnetac5olso52ckr.apps.googleusercontent.com",
+                //client_id: import.meta.env.VITE_APP_GOOGLE_CLIENT y en .env mismo nombre
                 callback: handleCredentialResponse
             });
             window.google.accounts.id.renderButton(
