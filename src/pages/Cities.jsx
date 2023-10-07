@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import {Link} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { filtered_cities, get_cities } from '../store/actions/cityActions';
+import Swal from 'sweetalert2';
 
 const Cities = () => {
     const cities = useSelector((store) => store.cityReducer.cities);
@@ -15,9 +16,21 @@ const Cities = () => {
     }, []);
 
     const handleSearch = async () => {
-          dispatch(filtered_cities({
-            name: inputSearch.current.value
-          }))
+      const result = await Swal.fire({
+        title: "Confirm search?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: `Yes`,
+        denyButtonText: `Go back`,
+      })
+      if (result.isConfirmed) {
+        Swal.fire('Search ok','', 'success')
+        dispatch(filtered_cities({
+          name: inputSearch.current.value
+        }))
+      } else if (result.isDenied) {
+        Swal.fire("Search cancelled", "", "error")
+      }
     }
     
     return (

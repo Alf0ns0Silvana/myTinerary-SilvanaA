@@ -1,5 +1,6 @@
 import {createAction, createAsyncThunk} from '@reduxjs/toolkit';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 import apiUrl from '../../api.js';
 
 export const user_photo = createAction('user_photo', (obj) => {
@@ -18,13 +19,24 @@ export const user_login = createAsyncThunk('user_login', async (obj) => {
         console.log(data)
         localStorage.setItem('token',data.response.token)
         localStorage.setItem('user', JSON.stringify(data.response.user))
+        Swal.fire({
+            title: 'Hello again!',
+            text: data.message,
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          }) 
             return {
                 user: data.response.user,
                 token: data.response.token
             }
-        
     } catch (error) {
         console.log(error);
+        Swal.fire({
+            title: 'Error!',
+            text: error.response.data.message,
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          })
         return {
             user: null
         }
@@ -37,13 +49,24 @@ export const user_signup = createAsyncThunk('user_signup', async (obj) => {
         // console.log(data)
         localStorage.setItem('token',data.response.token)
         localStorage.setItem('user', JSON.stringify(data.response.user))
+        Swal.fire({
+            title: 'Welcome!',
+            text: 'Do you want to continue',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          }) 
             return {
                 user: data.response.user,
                 token: data.response.token
-            }
-        
+            }      
     } catch (error) {
         console.log(error);
+        Swal.fire({
+            title: 'Error!',
+            text: error.response.data.message,
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          })
         return {
             user: null
         }
